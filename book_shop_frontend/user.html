@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>detail - Markito's | BookShop</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="account.js" async></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="images/logo.png" width="150px" />
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="index.html" id="home">Home</a></li>
+            <li><a href="products.html" id="product">Products</a></li>
+
+            <li>
+              <a
+                type="button"
+                onclick="isLogged('user.html')"
+                class="account"
+                id="account"
+                >Account</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a id="badge" onclick="isLogged('cart.html')"
+          ><img src="images/cart.png" width="30px" height="30px" id="cart" />
+        </a>
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" />
+      </div>
+    </div>
+    <!-------------------------------------------------------------------->
+    <div class="containerUser"></div>
+    <div class="small-container cart-page">
+      <h1>Orders:</h1>
+      <table id="orders"></table>
+    </div>
+
+    <button type="" class="red" onclick="logOut()">Log Out</button>
+
+    <!---------     footer     ----------->
+    <div class="footer">
+      <h3>Marcantonio D'Agosta &emsp; PSR 2022/23 &emsp; lab 10.4</h3>
+    </div>
+    <script>
+      var MenuItems = document.getElementById("MenuItems");
+      MenuItems.style.maxHeight = "0px";
+
+      function menutoggle() {
+        if (MenuItems.style.maxHeight == "0px") {
+          MenuItems.style.maxHeight = "400px";
+        } else {
+          MenuItems.style.maxHeight = "0px";
+        }
+      }
+    </script>
+  </body>
+</html>
